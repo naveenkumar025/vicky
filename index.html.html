@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vignesh weds Raajpriya – Wedding Invitation</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+Tamil:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+:root{--maroon:#6b1220;--deep:#2a0a10;--gold:#d9a441;--saffron:#e8731a;--ivory:#fbf3e0;--jasmine:#fffaf0;
+--serif:'Marcellus','Cormorant Garamond',Georgia,serif;--tamil:'Noto Serif Tamil','Marcellus',serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--deep);color:var(--ivory);font-family:var(--serif);line-height:1.6;min-height:100%}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* Temple entrance */
+#gate{position:fixed;inset:0;z-index:50;background:radial-gradient(ellipse at 50% 100%,#8a1a2c,var(--deep) 70%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;overflow:hidden;transition:opacity 1s .9s,visibility 0s 1.9s}
+#gate.open{opacity:0;visibility:hidden;pointer-events:none}
+#gate .om{position:absolute;top:calc(env(safe-area-inset-top,0px) + 4vh);width:100%;font-family:var(--tamil);color:var(--gold);font-size:1.05rem;padding:0 1rem}
+#tower{width:min(78vw,380px);display:block;margin-bottom:-2px}
+#doorway{position:relative;width:min(46vw,224px);height:min(40vh,260px);background:radial-gradient(circle at 50% 40%,#ffd98a,#e8731a 60%,#7a2a08);border-radius:999px 999px 0 0;overflow:hidden;margin-bottom:calc(env(safe-area-inset-bottom,0px))}
+.leaf{position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,#4a0d17 0 14px,#5c1220 14px 28px);border:2px solid var(--gold);transition:transform 1.2s cubic-bezier(.6,0,.3,1)}
+.leaf.l{left:0;border-radius:999px 0 0 0}.leaf.r{right:0;border-radius:0 999px 0 0}
+.leaf::after{content:"";position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px #4a0d17}
+.leaf.l::after{right:10px}.leaf.r::after{left:10px}
+#gate.open .l{transform:translateX(-102%)}#gate.open .r{transform:translateX(102%)}
+#enter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;background:var(--gold);color:var(--deep);border:0;border-radius:999px;padding:.7rem 1.4rem;font-size:1rem;box-shadow:0 4px 18px #0008;animation:pulse 2s infinite}
+#gate.open #enter{display:none}
+@keyframes pulse{50%{box-shadow:0 0 0 12px #d9a44133}}
+.gatecap{position:absolute;top:calc(env(safe-area-inset-top,0px) + 4vh + 2.4rem);width:100%;font-size:.95rem;color:#f3dcae}
+/* Page */
+main{max-width:720px;margin:0 auto;padding:0 1.25rem 5rem}
+.hero{text-align:center;padding:4.5rem 0 3rem;border-bottom:1px solid #d9a44155}
+.blessing{font-family:var(--tamil);color:var(--gold);font-size:1.1rem;margin:0 0 .3rem}
+.sub{color:#e9d2a3;margin:.2rem 0 1.6rem;font-size:.98rem}
+h1{font-weight:400;font-size:clamp(2.6rem,11vw,4.6rem);line-height:1.05;margin:.4rem 0;color:var(--ivory)}
+h1 .weds{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.42em;color:var(--gold);margin:.35rem 0}
+.parents{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.2rem;text-align:center}
+.parents p{margin:0;font-size:.95rem;color:#f3dcae}
+.parents b{display:block;font-weight:400;color:var(--ivory);font-size:1.05rem;margin-top:.15rem}
+.parents span{font-size:.8rem;color:var(--gold)}
+section{padding:3rem 0 0;text-align:center}
+h2{font-weight:400;font-size:1.6rem;margin:0 0 .4rem;color:var(--gold)}
+.lead{margin:0 auto 1.4rem;max-width:34ch;color:#e9d2a3}
+/* Scratch */
+.card{position:relative;width:min(100%,360px);height:190px;margin:0 auto;border-radius:18px;border:3px solid var(--gold);background:var(--jasmine);color:var(--maroon);overflow:hidden;display:grid;place-items:center;box-shadow:0 10px 30px #0007}
+.date{text-align:center;line-height:1.15}
+.date .d{font-size:3.4rem}.date .m{font-size:1.25rem}.date .w{font-size:.95rem;color:var(--saffron)}
+#scratch{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;transition:opacity .8s}
+#scratch.gone{opacity:0;pointer-events:none}
+.skip{margin-top:.9rem;background:none;border:0;color:#e9d2a3;text-decoration:underline;font-size:.9rem}
+/* Countdown */
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;max-width:420px;margin:1rem auto 0}
+.count div{background:#4a0d17;border:1px solid #d9a44166;border-radius:12px;padding:.8rem .2rem}
+.count b{display:block;font-weight:400;font-size:2rem;color:var(--ivory);font-variant-numeric:tabular-nums}
+.count span{font-size:.8rem;color:var(--gold)}
+/* Timeline */
+.tl{position:relative;max-width:460px;margin:1.6rem auto 0;text-align:left;padding-left:2.2rem}
+.tl::before{content:"";position:absolute;left:.65rem;top:.4rem;bottom:.4rem;width:2px;background:linear-gradient(var(--gold),var(--saffron))}
+.ev{position:relative;margin-bottom:1.8rem}
+.ev::before{content:"";position:absolute;left:-2.05rem;top:.3rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--deep),0 0 0 5px var(--gold)}
+.ev h3{margin:0;font-weight:400;font-size:1.3rem;color:var(--ivory)}
+.ev p{margin:.1rem 0;color:#e9d2a3}.ev .day{color:var(--gold)}
+.btn{display:inline-block;margin-top:2rem;background:var(--gold);color:var(--deep);text-decoration:none;border-radius:999px;padding:.85rem 1.8rem;font-size:1.05rem;box-shadow:0 6px 20px #0006}
+.btn:hover{background:#ecbb5c}
+footer{text-align:center;margin-top:3.5rem;color:#e9d2a3;font-size:.95rem}
+footer .t{font-family:var(--tamil);color:var(--gold);font-size:1.05rem}
+#music{position:fixed;right:max(1rem,env(safe-area-inset-right,0px));top:calc(env(safe-area-inset-top,0px) + .8rem);z-index:40;background:#4a0d17;color:var(--gold);border:1px solid var(--gold);border-radius:999px;padding:.45rem .9rem;font-size:.85rem;display:none}
+body.in #music{display:block}
+.pop{position:fixed;width:8px;height:12px;z-index:60;pointer-events:none;border-radius:2px;animation:fall 1.6s ease-out forwards}
+@keyframes fall{to{transform:translate(var(--x),var(--y)) rotate(540deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){#enter{animation:none}.leaf,#gate{transition-duration:.01s;transition-delay:0s}.pop{display:none}}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="om">திருமண அழைப்பிதழ்</div>
+  <div class="gatecap">Wedding Invitation</div>
+  <svg id="tower" viewBox="0 0 380 300" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#e8b24f"/><stop offset="1" stop-color="#a8651c"/></linearGradient></defs>
+    <circle cx="190" cy="10" r="6" fill="#d9a441"/><path d="M190 14v22" stroke="#d9a441" stroke-width="3"/>
+    <path d="M170 60q20-24 40 0z" fill="#d9a441"/>
+    <path d="M150 90 L230 90 L218 60 L162 60z" fill="url(#g)"/>
+    <path d="M125 125 L255 125 L236 90 L144 90z" fill="url(#g)" opacity=".95"/>
+    <path d="M100 165 L280 165 L254 125 L126 125z" fill="url(#g)" opacity=".9"/>
+    <path d="M72 210 L308 210 L280 165 L100 165z" fill="url(#g)" opacity=".85"/>
+    <path d="M40 300 L340 300 L308 210 L72 210z" fill="#8a3a14"/>
+    <g stroke="#4a0d17" stroke-width="2" opacity=".55"><path d="M162 75h56M144 108h92M126 146h128M100 188h180"/></g>
+    <g fill="#4a0d17" opacity=".5"><rect x="176" y="68" width="8" height="14"/><rect x="196" y="68" width="8" height="14"/><rect x="160" y="100" width="8" height="16"/><rect x="186" y="100" width="8" height="16"/><rect x="212" y="100" width="8" height="16"/></g>
+  </svg>
+  <div id="doorway">
+    <button id="enter">Open the temple doors</button>
+    <div class="leaf l"></div><div class="leaf r"></div>
+  </div>
+</div>
+
+<button id="music" aria-pressed="false">♪ Music: off</button>
+
+<main>
+  <header class="hero">
+    <p class="blessing">ஸ்ரீ கணேசாய நம:</p>
+    <p class="sub">With the blessings of the Almighty, we joyfully invite you</p>
+    <h1><span id="groom">Vignesh</span><span class="weds">weds</span><span id="bride">Raajpriya</span></h1>
+    <div class="parents">
+      <p>Son of<b id="gp">Mr. &amp; Mrs. [Groom’s parents]</b></p>
+      <p>Daughter of<b id="bp">Mr. &amp; Mrs. [Bride’s parents]</b></p>
+    </div>
+  </header>
+
+  <section>
+    <h2>Scratch to find the date</h2>
+    <p class="lead">Rub the golden foil with your finger or mouse.</p>
+    <div class="card">
+      <div class="date" aria-live="polite"><div class="w">Monday</div><div class="d">12</div><div class="m">April 2027</div></div>
+      <canvas id="scratch" aria-label="Scratch card covering the wedding date"></canvas>
+    </div>
+    <button class="skip" id="skip">Reveal the date</button>
+  </section>
+
+  <section>
+    <h2>The celebration begins in</h2>
+    <div class="count" role="timer" aria-live="off">
+      <div><b id="cd">0</b><span>Days</span></div><div><b id="ch">0</b><span>Hours</span></div>
+      <div><b id="cm">0</b><span>Minutes</span></div><div><b id="cs">0</b><span>Seconds</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Two days of joy</h2>
+    <div class="tl">
+      <div class="ev"><h3>Reception</h3><p class="day">Sunday, 11th April 2027</p><p>Join us for an evening of music, blessings and a shared meal.</p></div>
+      <div class="ev"><h3>Marriage</h3><p class="day">Monday, 12th April 2027</p><p>The wedding ceremony, with your presence as our greatest blessing.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Venue</h2>
+    <p class="lead">Sivamani Thirumana Mahal</p>
+    <a class="btn" href="https://maps.app.goo.gl/SidZPtwCrFxzCpQNA" target="_blank" rel="noopener">View Location</a>
+  </section>
+
+  <footer>
+    <p class="t">காலத்துக்கும் நீ வேணும்</p>
+    <p>Please come, bless the couple and celebrate with us.</p>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var gate=$('gate'),music=$('music');
+  /* Countdown to the marriage day, 12 April 2027, 00:00 IST */
+  var target=new Date('2027-04-12T00:00:00+05:30').getTime();
+  function tick(){
+    var s=Math.max(0,Math.floor((target-Date.now())/1000));
+    $('cd').textContent=Math.floor(s/86400);
+    $('ch').textContent=Math.floor(s%86400/3600);
+    $('cm').textContent=Math.floor(s%3600/60);
+    $('cs').textContent=s%60;
+  }
+  tick();setInterval(tick,1000);
+
+  /* Gentle festive loop made in the browser (the original song can't be bundled) */
+  var ac,timer,on=false,step=0;
+  var notes=[392,440,523,587,659,587,523,440,392,523,659,784,659,523,587,440];
+  function play(){
+    var t=ac.currentTime,f=notes[step%notes.length];
+    var o=ac.createOscillator(),g=ac.createGain();
+    o.type='triangle';o.frequency.value=f;
+    g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.03);g.gain.exponentialRampToValueAtTime(.0001,t+.4);
+    o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.45);
+    if(step%4===0){var d=ac.createOscillator(),h=ac.createGain();d.type='sine';d.frequency.value=f/4;h.gain.setValueAtTime(.0001,t);h.gain.exponentialRampToValueAtTime(.18,t+.02);h.gain.exponentialRampToValueAtTime(.0001,t+.5);d.connect(h);h.connect(ac.destination);d.start(t);d.stop(t+.55)}
+    step++;
+  }
+  function setMusic(v){
+    try{
+      if(v){ac=ac||new (window.AudioContext||window.webkitAudioContext)();ac.resume();timer=setInterval(play,260)}
+      else{clearInterval(timer)}
+      on=v;music.textContent='♪ Music: '+(v?'on':'off');music.setAttribute('aria-pressed',v);
+    }catch(e){}
+  }
+  music.onclick=function(){setMusic(!on)};
+
+  /* Temple doors */
+  $('enter').onclick=function(){
+    gate.classList.add('open');document.body.classList.add('in');setMusic(true);
+    setTimeout(function(){window.scrollTo(0,0)},50);
+  };
+
+  /* Scratch card */
+  var cv=$('scratch'),ctx=cv.getContext('2d'),drawing=false,done=false,W,H;
+  function paint(){
+    var r=cv.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+    W=cv.width=Math.round(r.width*dpr);H=cv.height=Math.round(r.height*dpr);
+    var g=ctx.createLinearGradient(0,0,W,H);
+    g.addColorStop(0,'#c98a25');g.addColorStop(.35,'#f5d58a');g.addColorStop(.6,'#d9a441');g.addColorStop(1,'#b87818');
+    ctx.globalCompositeOperation='source-over';ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#6b1220';ctx.textAlign='center';ctx.font=(18*dpr)+'px Marcellus, serif';
+    ctx.fillText('Scratch here',W/2,H/2-6*dpr);
+    ctx.font=(15*dpr)+'px "Noto Serif Tamil", serif';ctx.fillText('இங்கே தேய்க்கவும்',W/2,H/2+20*dpr);
+  }
+  function pos(e){var r=cv.getBoundingClientRect();return[(e.clientX-r.left)*W/r.width,(e.clientY-r.top)*H/r.height]}
+  function scratch(e){
+    if(!drawing||done)return;var p=pos(e);
+    ctx.globalCompositeOperation='destination-out';ctx.beginPath();ctx.arc(p[0],p[1],26*(window.devicePixelRatio||1),0,7);ctx.fill();
+  }
+  function cleared(){
+    var d=ctx.getImageData(0,0,W,H).data,n=0,tot=0;
+    for(var i=3;i<d.length;i+=64){tot++;if(d[i]<20)n++}
+    return n/tot;
+  }
+  function reveal(){
+    if(done)return;done=true;cv.classList.add('gone');confetti();
+  }
+  cv.addEventListener('pointerdown',function(e){drawing=true;cv.setPointerCapture(e.pointerId);scratch(e)});
+  cv.addEventListener('pointermove',scratch);
+  cv.addEventListener('pointerup',function(){drawing=false;if(cleared()>.5)reveal()});
+  cv.addEventListener('pointercancel',function(){drawing=false});
+  $('skip').onclick=reveal;
+  function confetti(){
+    var c=['#d9a441','#e8731a','#c2185b','#fbf3e0','#2e7d32'],b=cv.getBoundingClientRect();
+    for(var i=0;i<46;i++){
+      var p=document.createElement('i');p.className='pop';
+      p.style.left=(b.left+b.width/2)+'px';p.style.top=(b.top+b.height/2)+'px';
+      p.style.background=c[i%c.length];
+      p.style.setProperty('--x',((Math.random()-.5)*340)+'px');p.style.setProperty('--y',(Math.random()*260-80)+'px');
+      document.body.appendChild(p);setTimeout(function(el){el.remove()},1700,p);
+    }
+  }
+  paint();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(!done&&!drawing)paint()});
+  window.addEventListener('resize',function(){if(!done)paint()});
+})();
+</script>
+</body>
+</html>
